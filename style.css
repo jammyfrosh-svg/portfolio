@@ -1,0 +1,351 @@
+/* 1. Global Reset */
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.highlight {
+    color: #e11d48;              /* Keeps the red color */
+    font-family: 'Algerian';      /* Only applies Algerian to your name */
+    font-weight: normal;         /* Algerian is naturally bold */
+    font-size: 1.1em;            /* Makes it slightly larger to stand out */
+}
+
+/* 2. Hero/Header Section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color: #0f172a; /* Midnight Blue */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.content h4 {
+    color: #94a3b8;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.content h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.content h1 span {
+    color: #e11d48; /* Vibrant Red */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e11d48;
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.4s;
+    border: 2px solid #e11d48;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #e11d48;
+}
+
+/* 3. Projects Section */
+.projects {
+    padding: 80px 0;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: #e11d48;
+    margin-bottom: 10px;
+}
+.highlight {
+    color: #e11d48; /* This is the red color */
+    font-weight: bold;
+}
+.contact-section {
+    padding: 80px 0;
+    background-color: #0f172a; /* Back to Midnight Blue */
+    color: white;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background-color: #1e293b;
+    color: white;
+    font-size: 16px;
+}
+
+#contact-form button {
+    cursor: pointer;
+    align-self: center;
+}
+footer {
+    background-color: #020617; /* Darker than the rest for a "grounded" look */
+    color: #94a3b8;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #1e293b;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* This ensures your name in the footer still uses that Algerian style */
+footer .highlight {
+    font-family: 'Algerian';
+    color: #e11d48;
+}
+/* This makes the card move up and glow when you touch it with the mouse */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background: #a8b3c5; /* Matches the slightly lighter blue */
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lifts the card up */
+    border-color: #e11d48;       /* Adds a red border on hover */
+    box-shadow: 0 10px 30px rgba(225, 29, 72, 0.2); /* Red glow */
+}
+
+/* Let's also make the project titles change color on hover */
+.card:hover h3 {
+    color: white;
+}
+/* Define the animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply it to your main heading and paragraph */
+.content h1, .content p, .content .btn {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.content p {
+    animation-delay: 0.3s; /* paragraph shows up slightly after the title */
+}
+
+.content .btn {
+    animation-delay: 0.6s; /* button shows up last */
+}
+.project-img {
+    width: 100%;
+    height: 180px; /* Specific height for consistency */
+    object-fit: cover; /* Crops the image to fit the box without stretching */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    filter: grayscale(40%); /* Subtle grayscale for a cool feel */
+    transition: 0.3s ease;
+}
+
+/* Hover effect on the image */
+.card:hover .project-img {
+    filter: grayscale(0%);
+    transform: scale(1.03); /* Tiny zoom effect */
+}
+.ck {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #e11d48;
+    box-shadow: 0 0 30px rgba(225, 29, 72, 0.2);
+    margin-bottom: 20px;
+}
+.contact {
+    padding: 80px 0;
+    background-color: #020617; /* Darkest blue */
+    color: white;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: #e11d48;
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.3);
+}
+
+#contact-form .btn {
+    width: fit-content;
+    align-self: center;
+    cursor: pointer;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column; /* Stacks the text and image */
+        text-align: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Makes cards full width instead of 3 in a row */
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Makes the big title fit on a phone screen */
+    }
+
+    .ck {
+        width: 120px; /* Shrinks the logo slightly for mobile */
+        height: 120px;
+    }
+}
+.skills {
+    padding: 60px 0;
+    background: #0f172a;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: #e11d48;
+    transform: translateY(-5px);
+}
+
+/* The Progress Bars */
+.bar {
+    background: #334155;
+    height: 8px;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #e11d48;
+    border-radius: 10px;
+}
+
+/* Set your skill levels here */
+.micro { width: 90%; }
+.water { width: 85%; }
+.web { width: 70%; }
+.page-body {
+    padding: 100px 0;
+    color: white;
+    background: #020617; /* Matches your dark theme */
+    min-height: 100vh;
+}
+
+.back-btn {
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.detailed-content h2 {
+    color: #e11d48;
+    margin-top: 40px;
+}
+
+.detailed-content p {
+    line-height: 1.8;
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(2, 6, 23, 0.9); /* Dark blue blur */
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    z-index: 1000;
+    border-bottom: 1px solid #e11d48;
+}
+
+.sticky-nav a {
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+}
